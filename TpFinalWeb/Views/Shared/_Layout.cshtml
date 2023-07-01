@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TpFinalWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TpFinalWeb.styles.css" asp-append-version="true" />
+
+</head>
+@*
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TpFinalWeb</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CerrarSesion">Salir</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - TpFinalWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+*@
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand
+        <a class="navbar-brand ps-3" asp-area="" asp-controller="Home" asp-action="Index">MY EMAIL</a>
+        -->
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+
+
+        <ul class="navbar-nav ms-auto me-0 me-md-3 my-2 my-md-0">
+            <li class="nav-item dropdown">
+                <a class="navbar-brand ps-3" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+            </li>
+        </ul>
+       
+    </nav>
+
+
+
+    <div id="layoutSidenav">
+
+
+
+        <div id="layoutSidenav_nav">
+
+
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+
+                        <div class="sb-sidenav-menu-heading">Funciones</div>
+
+                        <a class="nav-link" href="@Url.Action("EnviarCorreo","Home")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Enviar correo electrónico
+                        </a>
+
+                        <div class="sb-sidenav-menu-heading">Carpetas</div>
+
+                        <a class="nav-link" href="@Url.Action("BandejaEntrada","Home")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Bandeja de Entrada
+                        </a>
+
+                        <a class="nav-link" href="@Url.Action("ElementosEnviados","Home")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Elementos Enviados
+                        </a>
+
+                        @*<div class="sb-sidenav-menu-heading">Usuarios</div>
+
+                        <a class="nav-link" asp-area="" asp-controller="Clientes" asp-action="Index">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Acceder Datos
+                        </a>*@
+
+
+
+                        <div class="sb-sidenav-menu-heading">Reglas</div>
+
+
+                        <a class="nav-link" href="@Url.Action("Privacy","Home")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Privacy
+                        </a>
+
+                        <div class="sb-sidenav-menu-heading">Mi cuenta</div>
+
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="CerrarSesion">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Cerrar Sesión
+                        </a>
+
+
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    @*<div class="small">Logged in as:</div>*@
+                    Grupo 7
+                </div>
+            </nav>
+        </div>
+
+
+
+
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+
+
+
+                    @RenderBody()
+
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Serezo Pablo;   Mathieu Guillermo;  Garcia Anibal</div>
+                     @*   <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>*@
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/scripts.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+
+
+
+    @*
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+    <ul class="navbar-nav flex-grow-1">
+    <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contacto">Contacto</a>
+    </li>
+    </ul>
+    </div> *@
+
+
+
+
+
+
+</body>
+
+</html>

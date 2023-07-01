@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "EnviarCorreo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+    <h1 style="text-align:center;text-decoration:underline">Nuevo Correo</h1>
+    <hr />
+
+    <form>
+       
+        <div class="form-group">
+            <!-- Full Name -->
+            <label for="full_name_id" class="control-label"><strong>Para</strong></label>
+            
+            <input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="Id destinatario">
+        </div>
+        
+        <br />
+        <div class="form-group">
+            <!-- Street 1 -->
+            <label for="street1_id" class="control-label"><strong>Asunto</strong></label>
+            
+            <input type="text" class="form-control" id="street1_id" name="street1" placeholder="Tema del mensaje">
+        </div>
+       
+        <br />
+        <div class="form-group">
+            <!-- Street 2 -->
+            <label for="street2_id" class="control-label"><strong>Mensaje</strong></label>
+            
+            <input type="text" class="form-control" id="street2_id" name="street2">
+        </div>
+       
+        <br />
+        <div class="form-group">
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+        
+    </form>
+
+    </body>
+
+</html>

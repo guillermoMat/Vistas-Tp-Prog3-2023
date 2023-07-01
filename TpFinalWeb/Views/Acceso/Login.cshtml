@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Login</title>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <link href="~/css/loginstyle.css" rel="stylesheet" />
+    
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <!-- Icon -->
+            <div class="fadeIn first">
+                <img src="image/csharp logo.png" id="icon" alt="User Icon" />
+            </div>
+
+            <!-- Login Form -->
+            <form action="@Url.Action("Login","Acceso")" method="post">
+                <input type="text" id="login" class="fadeIn second" name="Correo" placeholder="Correo">
+                <input type="text" id="password" class="fadeIn third" name="Clave" placeholder="Contraseña">
+                <input type="submit" class="fadeIn fourth" value="Iniciar Sesion">
+            </form>
+
+            <!-- Remind Passowrd -->
+         @*   <div id="formFooter">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>*@
+
+        </div>
+    </div>
+
+</body>
+</html>
